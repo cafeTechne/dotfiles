@@ -119,9 +119,18 @@ fi
 export DO_IP="104.131.0.27"
 alias sshdo="ssh jonas@$DO_IP -p 2222"
 alias up="cd .."
+
+#############
+### CAFFE ###
+#############
 export PYTHONPATH="$HOME/opt/caffe/python/:$PYTHONPATH"
 
-# added by Anaconda3 4.2.0 installer
+################
+### ANACONDA ###
+################
 export PATH="/home/jonas/opt/anaconda/bin:$PATH"
 
+###########
+### RVM ###
+###########
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
