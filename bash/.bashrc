@@ -134,3 +134,30 @@ export PATH="/home/jonas/opt/anaconda/bin:$PATH"
 ### RVM ###
 ###########
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+####################
+### DRAGONREALMS ###
+####################
+
+export LICH="$HOME/lich/lich.rbw"
+export PROFANITY="$HOME/lich/ProfanityFE/profanity.rb"
+export PROFANITY_LOGS="$HOME/lich/ProfanityFE/log/"
+export SETTINGS_FILE="$HOME/lich/ProfanityFE/.profanity.xml"
+export TERM=screen-256color
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+alias jonas="screen -dmS 'lich-jonas' ruby $LICH --dragonrealms --login Jonas --detachable-client=8002 --without-frontend"
+alias prof-jonas="ruby $PROFANITY --port=8002 --log-name=Jonas --log-dir=$PROFANITY_LOGS --settings-file=/home/jonas/lich/ProfanityFE/.profanity.xml"
+alias crannach="screen -dmS 'lich-crannach' ruby $LICH --dragonrealms --login Crannach --detachable-client=8000 --without-frontend"
+alias prof-crannach="ruby $PROFANITY --port=8000 --log-name=Crannach --log-dir=$PROFANITY_LOGS --settings-file=$SETTINGS_FILE"
+alias riphik="screen -dmS ruby $LICH --login Riphik --detachable-client=8001 --without-frontend"
+alias prof-riphik="ruby $PROFANITY --port=8001 --log-name=Riphik --custom-colors=no --log-dir=$PROFANITY_LOGS --setings-file=$SETTINGS_FILE"
+alias prof-dijkstra="ruby $PROFANITY --port=8003 --log-name=Dijkstra --custom-colors=no --log-dir=$PROFANITY_LOGS"
+alias dijkstra="screen -dmS 'lich-dijkstra' ruby $LICH --dragonrealms --login Dijkstra --detachable-client=8003 --without-frontend"
+alias fallanor="screen -dmS 'lich-fallanor' ruby $LICH --dragonrealms --login Fallanor --detachable-client=8004 --without-frontend"
+alias prof-fallanor="ruby $PROFANITY --port=8004 --log-name=Fallanor --custom-colors=no --log-dir=$PROFANITY_LOGS --settings-file=$SETTINGS_FILE"
+alias falun="screen -dmS 'lich-falun' ruby $LICH --dragonrealms --login Falun --detachable-client=8005 --without-frontend"
+alias prof-falun="ruby $PROFANITY --port=8005 --log-name=Falun --custom-colors=no --log-dir=$PROFANITY_LOGS --settings-file=$SETTINGS_FILE"
+alias distress="screen -dmS 'lich-distress' ruby $LICH --dragonrealms --login Distress --detachable-client=8006 --without-frontend"
+alias prof-distress="ruby $PROFANITY --port=8006 --log-name=Distress --custom-colors=no --log-dir=$PROFANITY_LOGS --settings-file=$SETTINGS_FILE"
+alias dr="tmux attach -d -t dr"
