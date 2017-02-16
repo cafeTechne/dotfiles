@@ -15,6 +15,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'christoomey/vim-tmux-navigator' " Navigate between tmux and vim panes with a single set of hotkeys
+Plugin 'tpope/vim-fugitive' "git stuff
+Bundle 'vim-ruby/vim-ruby'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -22,7 +24,10 @@ filetype plugin indent on    " required
 colorscheme molokai
 set number
 syntax on
-"filetype on
+filetype on
+set nocompatible
+filetype indent on
+filetype plugin on
 au BufNewFile,BufRead *.lic set filetype=ruby
 au BufNewFile,BufRead *.py
     \ set tabstop=4
