@@ -16,12 +16,15 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'christoomey/vim-tmux-navigator' " Navigate between tmux and vim panes with a single set of hotkeys
 Plugin 'tpope/vim-fugitive' "git stuff
+Plugin 'xolox/vim-misc' " Dependency for vim-notes
+Plugin 'xolox/vim-notes' " Note taking
 Bundle 'vim-ruby/vim-ruby'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme molokai
+set guifont=Monaco:h20
 set number
 syntax on
 filetype on
