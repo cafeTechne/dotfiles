@@ -120,6 +120,12 @@ export DO_IP="104.131.0.27"
 alias sshdo="ssh jonas@$DO_IP -p 2222"
 alias up="cd .."
 
+###########
+### H2L ###
+###########
+export PYTHONPATH="$HOME/h2l/h2l/h2l/:$PYTHONPATH"
+export H2L_SETTINGS="$HOME/h2l/config.py"
+
 #############
 ### CAFFE ###
 #############
