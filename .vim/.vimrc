@@ -1,7 +1,3 @@
-set nocompatible              " required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -16,24 +12,25 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'christoomey/vim-tmux-navigator' " Navigate between tmux and vim panes with a single set of hotkeys
 Plugin 'tpope/vim-fugitive' "git stuff
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'avakhov/vim-yaml'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+set nocompatible
+syntax on
 filetype plugin indent on    " required
-
 colorscheme molokai
 set number
-syntax on
-filetype on
-set nocompatible
-filetype indent on
-filetype plugin on
+autocmd FileType ruby compiler ruby
 au BufNewFile,BufRead *.lic set filetype=ruby
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+set shiftwidth=2
+set tabstop=2
+set expandtab
+"au BufNewFile,BufRead *.py
+ "   \ set tabstop=4
+  "  \ set softtabstop=4
+   " \ set shiftwidth=4
+   " \ set textwidth=79
+   " \ set expandtab
+   " \ set autoindent
+   " \ set fileformat=unix
