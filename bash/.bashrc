@@ -143,6 +143,7 @@ export LICH="$HOME/lich/lich.rbw"
 export PROFANITY="$HOME/lich/ProfanityFE/profanity.rb"
 export PROFANITY_LOGS="$HOME/lich/ProfanityFE/log/"
 export SETTINGS_FILE="$HOME/lich/ProfanityFE/.profanity.xml"
+export ALT_SETTINGS_FILE="$HOME/lich/ProfanityFE/.alternate.xml"
 export TERM=screen-256color
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -155,9 +156,9 @@ alias prof-riphik="ruby $PROFANITY --port=8001 --log-name=Riphik --custom-colors
 alias prof-dijkstra="ruby $PROFANITY --port=8003 --log-name=Dijkstra --custom-colors=no --log-dir=$PROFANITY_LOGS"
 alias dijkstra="screen -dmS 'lich-dijkstra' ruby $LICH --dragonrealms --login Dijkstra --detachable-client=8003 --without-frontend"
 alias fallanor="screen -dmS 'lich-fallanor' ruby $LICH --dragonrealms --login Fallanor --detachable-client=8004 --without-frontend --user_id cranchu --password $CR_PW"
-alias prof-fallanor="ruby $PROFANITY --port=8004 --log-name=Fallanor --custom-colors=no --log-dir=$PROFANITY_LOGS --settings-file=$SETTINGS_FILE"
+alias prof-fallanor="ruby $PROFANITY --port=8004 --log-name=Fallanor --custom-colors=no --log-dir=$PROFANITY_LOGS --settings-file=$ALT_SETTINGS_FILE"
 alias falun="screen -dmS 'lich-falun' ruby $LICH --dragonrealms --login Falun --detachable-client=8005 --without-frontend --char_name=Falun --user_id jandersson --password $JA_PW"
-alias prof-falun="ruby $PROFANITY --port=8005 --log-name=Falun --custom-colors=no --log-dir=$PROFANITY_LOGS --settings-file=$SETTINGS_FILE"
+alias prof-falun="ruby $PROFANITY --port=8005 --log-name=Falun --custom-colors=no --log-dir=$PROFANITY_LOGS --settings-file=$ALT_SETTINGS_FILE"
 alias distress="screen -dmS 'lich-distress' ruby $LICH --dragonrealms --login Distress --detachable-client=8006 --without-frontend"
 alias prof-distress="ruby $PROFANITY --port=8006 --log-name=Distress --custom-colors=no --log-dir=$PROFANITY_LOGS --settings-file=$SETTINGS_FILE"
 alias dr="tmux attach -d -t dr"
