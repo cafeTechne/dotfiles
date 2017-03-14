@@ -14,12 +14,15 @@ Plugin 'christoomey/vim-tmux-navigator' " Navigate between tmux and vim panes wi
 Plugin 'tpope/vim-fugitive' "git stuff
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'avakhov/vim-yaml'
+Plugin 'xolox/vim-misc' " Dependency for vim-notes
+Plugin 'xolox/vim-notes' " Note taking
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 set nocompatible
 syntax on
 filetype plugin indent on    " required
 colorscheme molokai
+set guifont=Monaco:h20
 set number
 autocmd FileType ruby compiler ruby
 au BufNewFile,BufRead *.lic set filetype=ruby
