@@ -16,6 +16,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'avakhov/vim-yaml'
 Plugin 'xolox/vim-misc' " Dependency for vim-notes
 Plugin 'xolox/vim-notes' " Note taking
+Plugin 'tpope/vim-speeddating'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 set nocompatible
