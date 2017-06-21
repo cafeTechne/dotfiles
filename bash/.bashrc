@@ -124,13 +124,17 @@ alias up="cd .."
 ### H2L ###
 ###########
 export PYTHONPATH="$HOME/h2l/h2l/h2l/:$PYTHONPATH"
-export H2L_SETTINGS="$HOME/h2l/config.py"
 
-#############
-### CAFFE ###
-#############
+# Virtualenv
+export WORKON_HOME=~/Envs
+
+####################
+### CAFFE/CAFFE2 ###
+####################
 export PYTHONPATH="$HOME/opt/caffe/python/:$PYTHONPATH"
-
+export CPLUS_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/python3.5m
+export PYTHONPATH="$HOME/opt/caffe2/build:$PYTHONPATH"
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 ################
 ### ANACONDA ###
 ################
