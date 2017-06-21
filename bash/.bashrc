@@ -123,14 +123,20 @@ alias up="cd .."
 ###########
 ### H2L ###
 ###########
-export PYTHONPATH="$HOME/h2l/h2l/h2l/:$PYTHONPATH"
 export H2L_SETTINGS="$HOME/h2l/config.py"
-
-#############
-### CAFFE ###
-#############
+export PYTHONPATH="$HOME/h2l/h2l/h2l:$PYTHONPATH"
+############
+### CUDA ###
+############
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\ ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+####################
+### CAFFE/CAFFE2 ###
+####################
+export CPLUS_INCLUDE_PATH=/usr/include/python3.5
 export PYTHONPATH="$HOME/opt/caffe/python/:$PYTHONPATH"
-
+export PYTHONPATH="$PYTHONPATH:$HOME/opt/caffe2/build"
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 ################
 ### ANACONDA ###
 ################
